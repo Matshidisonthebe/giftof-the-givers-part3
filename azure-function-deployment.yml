@@ -1,0 +1,11 @@
+# Azure Functions deployment step.
+# Replace the service connection and Function App name with your Azure resources.
+
+steps:
+- task: AzureFunctionApp@2
+  displayName: Deploy Gift of the Givers Azure Function
+  inputs:
+    azureSubscription: 'YOUR-AZURE-SERVICE-CONNECTION'
+    appType: 'functionApp'
+    appName: 'YOUR-FUNCTION-APP-NAME'
+    package: '$(Build.ArtifactStagingDirectory)/function.zip'

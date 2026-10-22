@@ -1,0 +1,13 @@
+# Deployment stage template to add after the build/test stage.
+# Create an Azure Resource Manager service connection in Azure DevOps and replace:
+#   YOUR-AZURE-SERVICE-CONNECTION
+#   YOUR-APP-SERVICE-NAME
+
+steps:
+- task: AzureWebApp@1
+  displayName: Deploy ASP.NET Core web app to Azure App Service
+  inputs:
+    azureSubscription: 'YOUR-AZURE-SERVICE-CONNECTION'
+    appType: 'webApp'
+    appName: 'YOUR-APP-SERVICE-NAME'
+    package: '$(Pipeline.Workspace)/webapp/**/*.zip'

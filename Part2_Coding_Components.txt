@@ -1,0 +1,5 @@
+Part 2 coding components included in this project:
+A - Azure Functions HTTP Trigger donation automation
+B - Azure Repos Git-ready solution with .gitignore
+C - Azure Pipelines build YAML
+D - GiftOfTheGivers.Helpers class library used by the MVC donation controller
